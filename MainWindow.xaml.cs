@@ -20,5 +20,17 @@ namespace GameOfNim
         {
             InitializeComponent();
         }
+
+        private void btnStart_Click(object sender, RoutedEventArgs e)
+        {
+            MenuScreen menuScreen = new MenuScreen();
+            menuScreen.Show();
+            this.Hide();
+        }
+
+        private void btnEnd_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

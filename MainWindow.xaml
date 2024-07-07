@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GameOfNim"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="645" Width="800">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/PlayBoard.png"/>
+        </Grid.Background>
+        <Label Content="Welcome to the Game of Nim" FontSize="30" HorizontalAlignment="Center" Foreground="Black" Margin="0,75,0,470" FontWeight="Bold" FontStyle="Italic"/>
+        <Button x:Name="btnStart" Content="Start Game" Click="btnStart_Click" Foreground="#FFFFFEFE" Background="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="150" Margin="198,447,0,0" FontSize="24" FontWeight="Bold" FontStyle="Italic"/>
+        <Button x:Name="btnEnd" Content="End Application" Click="btnEnd_Click" Foreground="#FFFFFEFE" Background="Black" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Width="205" Margin="400,447,0,0" FontSize="24" FontWeight="Bold" FontStyle="Italic" RenderTransformOrigin="0.36,0.483"/>
+        <TextBlock Text="In this game, player’s will take alternate turns. On each player’s turn, they may remove any number of stones from one of the piles, up to the number of stones remaining in that pile: but they can only take from one of the piles. The goal of the game is to take the last stone. Whoever take the last stone wins." Margin="92,164,92,215" FontSize="24" TextAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" FontStyle="Italic"/>
+
 
     </Grid>
 </Window>

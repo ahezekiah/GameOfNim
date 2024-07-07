@@ -8,4 +8,16 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\DirtTexture.png" />
+    <None Remove="Resources\PlayBoard.png" />
+    <None Remove="Resources\Stone2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\DirtTexture.png" />
+    <Resource Include="Resources\PlayBoard.png" />
+    <Resource Include="Resources\Stone2.png" />
+  </ItemGroup>
+
 </Project>

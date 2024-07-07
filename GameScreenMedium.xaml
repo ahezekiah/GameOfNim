@@ -1,0 +1,40 @@
+﻿<Window x:Class="GameOfNim.GameScreenMedium"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameOfNim"
+        mc:Ignorable="d"
+        Title="GameScreenMedium" Height="645" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/DirtTexture.png"/>
+        </Grid.Background>
+        <Label Content="Difficulty : Medium" Margin="10,10,0,0" FontSize="30" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Content="Player Name : " Margin="360,10,0,0" FontSize="30" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Button x:Name="btnRowOne" Content="Row 1" Click="btnRowOne_Click" Margin="595,80,43,485" FontWeight="Bold" FontSize="24" Background="#FF979595"/>
+        <Button x:Name="btnRowTwo" Content="Row 2" Click="btnRowTwo_Click" Margin="595,175,43,390" FontWeight="Bold" FontSize="24" Background="#FF979595" />
+        <Button x:Name="btnRowThree" Content="Row 3" Click="btnRowThree_Click" Margin="595,272,43,291" FontWeight="Bold" FontSize="24" Background="#FF979595"/>
+        <Button x:Name="btnRowFour" Content="Row 4" Click="btnRowFour_Click" Margin="595,369,43,196" FontWeight="Bold" FontSize="24" Background="#FF979595"/>
+        <Button x:Name="btnRowFive" Content="Row 5" Click="btnRowFive_Click" Margin="595,466,43,99" FontWeight="Bold" FontSize="24" Background="#FF979595"/>
+        <Button x:Name="btnEndTurn" Content="End Turn" Click="btnEndTurn_Click" FontSize="25" FontWeight="Bold" FontStyle="Italic" Background="Black" Foreground="White" Margin="76,550,560,10" />
+        <Button x:Name="btnNewGame" Content="New Game" Click="btnNewGame_Click" FontSize="25" FontWeight="Bold" FontStyle="Italic" Background="Black" Foreground="White" Margin="305,550,331,10" />
+        <Button x:Name="btnReturnHome" Content="Close Game" Click="btnReturnHome_Click" FontSize="25" FontWeight="Bold" FontStyle="Italic" Background="Black" Foreground="White" Margin="529,550,107,10" />
+
+        <Image x:Name="Stone1" Source="/Resources/Stone2.png" Margin="239,83,453,488"/>
+        <Image x:Name="Stone2" Source="/Resources/Stone2.png" Margin="167,175,525,390"/>
+        <Image x:Name="Stone3" Source="/Resources/Stone2.png" Margin="326,175,366,390"/>
+        <Image x:Name="Stone4" Source="/Resources/Stone2.png" Margin="100,272,592,291"/>
+        <Image x:Name="Stone5" Source="/Resources/Stone2.png" Margin="234,272,458,291"/>
+        <Image x:Name="Stone6" Source="/Resources/Stone2.png" Margin="368,272,324,291"/>
+        <Image x:Name="Stone7" Source="/Resources/Stone2.png" Margin="67,369,625,196"/>
+        <Image x:Name="Stone8" Source="/Resources/Stone2.png" Margin="191,369,501,196"/>
+        <Image x:Name="Stone9" Source="/Resources/Stone2.png" Margin="306,369,386,196"/>
+        <Image x:Name="Stone10" Source="/Resources/Stone2.png" Margin="432,369,260,196"/>
+        <Image x:Name="Stone11" Source="/Resources/Stone2.png" Margin="11,466,681,99"/>
+        <Image x:Name="Stone12" Source="/Resources/Stone2.png" Margin="125,466,567,99"/>
+        <Image x:Name="Stone13" Source="/Resources/Stone2.png" Margin="233,466,459,99"/>
+        <Image x:Name="Stone14" Source="/Resources/Stone2.png" Margin="348,466,344,99"/>
+        <Image x:Name="Stone15" Source="/Resources/Stone2.png" Margin="457,466,235,99"/>
+    </Grid>
+</Window>

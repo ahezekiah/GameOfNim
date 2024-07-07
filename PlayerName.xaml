@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="GameOfNim.PlayerName"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GameOfNim"
+             mc:Ignorable="d" 
+               d:DesignHeight="50" d:DesignWidth="500">
+    <WrapPanel VerticalAlignment="Center">
+        <TextBlock Text="{Binding TitleCard}" Width="{Binding PlayerNameWidth}" FontSize="14"/>
+        <TextBox x:Name="txtPlayerName" Width="200" Height="25" MaxLength="{Binding MaxLength}" FontSize="20"/>
+        <TextBlock Text="{Binding Text.Length, ElementName=txtPlayerName}" FontSize="20"/>
+        <TextBlock Text="/" FontSize="20"/>
+        <TextBlock Text="{Binding MaxLength}" FontSize="20"/>
+    </WrapPanel>
+</UserControl>
