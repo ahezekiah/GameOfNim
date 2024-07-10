@@ -10,5 +10,11 @@ namespace GameOfNim
     {
         public string Name { get; set; }
         public int PlayerNum { get; set; }
+
+        public Player (string name, int playerNum)
+        {
+            Name = name;
+            PlayerNum = playerNum;
+        }
     }
 }
