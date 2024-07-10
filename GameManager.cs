@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace GameOfNim
 {
@@ -14,6 +15,8 @@ namespace GameOfNim
         public Player PlayerOne { get; set; }
         public Player PlayerTwo { get; set; }
         public bool IsPlayer1 { get; set; } = true;
+        public bool IsGameOver { get; set; } = false;
+        public List<List<Image>> Rows { get; set; }
 
         public GameManager(string p1Name, string p2Name) 
         {
@@ -24,6 +27,7 @@ namespace GameOfNim
         public void Start()
         {
             // Start of game loop
+
 
             while (!IsGameOver)
             {
@@ -53,8 +57,6 @@ namespace GameOfNim
 
         private bool CheckWin()
         {
-
-
             return false;
         }
     }

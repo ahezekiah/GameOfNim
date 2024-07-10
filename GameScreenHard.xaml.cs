@@ -26,33 +26,30 @@ namespace GameOfNim
 
         private void btnRowOne_Click(object sender, RoutedEventArgs e)
         {
-            //Has 1 stone in the row
+            //Has 3 stones in the row
         }
 
         private void btnRowTwo_Click(object sender, RoutedEventArgs e)
         {
-            //Has 2 stones in the row
+            //Has 5 stones in the row
         }
 
         private void btnRowThree_Click(object sender, RoutedEventArgs e)
         {
-            //Has 3 stones in the row
+            //Has 7 stones in the row
         }
 
         private void btnRowFour_Click(object sender, RoutedEventArgs e)
         {
-            //Has 4 stones in the row
+            //Has 9 stones in the row
         }
 
         private void btnRowFive_Click(object sender, RoutedEventArgs e)
         {
-            //Has 5 stones in the row
+            //Has 11 stones in the row
         }
 
-        private void btnRowSix_Click(object sender, RoutedEventArgs e)
-        {
-            //Has 6 stones in the row
-        }
+        
 
         private void btnEndTurn_Click(object sender, RoutedEventArgs e)
         {

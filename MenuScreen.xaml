@@ -17,10 +17,17 @@
         <RadioButton Content="Easy" Checked="RadioButton_Checked" GroupName="Difficulty" Margin="133,172,562,390" FontSize="25" FontStyle="Italic" FontWeight="Black" x:Name="rbEasy"/>
         <RadioButton Content="Medium" Checked="RadioButton_Checked" GroupName="Difficulty" Margin="336,172,316,390" FontStyle="Italic" FontWeight="Black" FontSize="25" x:Name="rbMedium"/>
         <RadioButton Content="Hard" Checked="RadioButton_Checked" GroupName="Difficulty" Margin="574,172,114,390" FontStyle="Italic" FontWeight="Black" FontSize="25" x:Name="rbHard"/>
-        <WrapPanel VerticalAlignment="Center" Margin="137,0,117,0" Height="51">
-            <TextBlock Text="Enter Your Name :" FontSize="25" FontWeight="Bold" FontStyle="Italic" TextWrapping="Wrap" Width="226"/>
-            <TextBox x:Name="txtPlayerName" Width="229" Height="37" MaxLength="30" FontSize="25" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Italic" Background="#00000000"/>
-            <TextBlock Text="{Binding Text.Length, ElementName=txtPlayerName}" FontSize="25" Foreground="Black" FontWeight="Bold" FontStyle="Italic"/>
+        <WrapPanel VerticalAlignment="Top" Margin="127,264,127,0" Height="51">
+            <TextBlock Text="Player 1 :" FontSize="25" FontWeight="Bold" FontStyle="Italic" TextWrapping="Wrap" Width="226"/>
+            <TextBox x:Name="txtPlayer1" Width="229" Height="37" MaxLength="30" FontSize="25" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Italic" Background="#00000000"/>
+            <TextBlock Text="{Binding Text.Length, ElementName=txtPlayer1}" FontSize="25" Foreground="Black" FontWeight="Bold" FontStyle="Italic"/>
+            <TextBlock Text="/" FontSize="25" Foreground="Black" FontWeight="Bold" FontStyle="Italic"/>
+            <TextBlock Text="30" FontSize="25" Foreground="Black" FontWeight="Bold" FontStyle="Italic"/>
+        </WrapPanel>
+        <WrapPanel VerticalAlignment="Top" Margin="127,348,127,0" Height="51">
+            <TextBlock Text="Player 2 :" FontSize="25" FontWeight="Bold" FontStyle="Italic" TextWrapping="Wrap" Width="226"/>
+            <TextBox x:Name="txtPlayer2" Width="229" Height="37" MaxLength="30" FontSize="25" TextWrapping="Wrap" TextAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontStyle="Italic" Background="#00000000"/>
+            <TextBlock Text="{Binding Text.Length, ElementName=txtPlayer2}" FontSize="25" Foreground="Black" FontWeight="Bold" FontStyle="Italic"/>
             <TextBlock Text="/" FontSize="25" Foreground="Black" FontWeight="Bold" FontStyle="Italic"/>
             <TextBlock Text="30" FontSize="25" Foreground="Black" FontWeight="Bold" FontStyle="Italic"/>
         </WrapPanel>

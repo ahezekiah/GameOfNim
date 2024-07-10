@@ -31,18 +31,14 @@ namespace GameOfNim
 
         private void btnRowTwo_Click(object sender, RoutedEventArgs e)
         {
-            //Has 2 stones in the row
+            //Has 3 stones in the row
         }
 
         private void btnRowThree_Click(object sender, RoutedEventArgs e)
         {
-            //Has 3 stones in the row
+            //Has 5 stones in the row
         }
 
-        private void btnRowFour_Click(object sender, RoutedEventArgs e)
-        {
-            //Has 4 stones in the row
-        }
 
         private void btnEndTurn_Click(object sender, RoutedEventArgs e)
         {
