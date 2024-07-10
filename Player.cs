@@ -9,12 +9,10 @@ namespace GameOfNim
     public class Player
     {
         public string Name { get; set; }
-        public int PlayerNum { get; set; }
 
-        public Player (string name, int playerNum)
+        public Player(string name)
         {
             Name = name;
-            PlayerNum = playerNum;
         }
     }
 }

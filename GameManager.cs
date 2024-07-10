@@ -8,11 +8,15 @@ namespace GameOfNim
 {
     public class GameManager
     {
-        public Player? PlayerOne { get; set; } = null;
-        public Player? PlayerTwo { get; set; } = null;
-        public bool IsPlayerOne { get; set; } = true;
-        public bool IsGameOver { get; set; } = false;
-        public GameManager() { }
+        public Player PlayerOne { get; set; }
+        public Player PlayerTwo { get; set; }
+        public bool IsPlayer1 { get; set; } = true;
+
+        public GameManager(string p1Name, string p2Name) 
+        {
+            PlayerOne = new Player(p1Name);
+            PlayerTwo = new Player(p2Name);
+        }
 
         public void Start()
         {
@@ -39,9 +43,9 @@ namespace GameOfNim
             // number of lists
         }
 
-        private void SwitchPlayer()
+        private void SwapPlayer()
         {
-
+            IsPlayer1 = !IsPlayer1;
         }
 
         private bool CheckWin()
