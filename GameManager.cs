@@ -8,6 +8,9 @@ namespace GameOfNim
 {
     public class GameManager
     {
+        public bool IsGameOver { get; set; } = false;
+        public GameManager() { }
+
         public Player PlayerOne { get; set; }
         public Player PlayerTwo { get; set; }
         public bool IsPlayer1 { get; set; } = true;
