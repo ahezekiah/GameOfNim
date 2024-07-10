@@ -32,5 +32,7 @@ namespace GameOfNim
         {
             this.Close();
         }
+
+       
     }
 }
