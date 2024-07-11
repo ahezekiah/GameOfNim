@@ -11,7 +11,7 @@
             <ImageBrush ImageSource="/Resources/DirtTexture.png"/>
         </Grid.Background>
         <Label Content="Difficulty : Easy" Margin="23,10,0,0" FontSize="24" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <Label Content="Player 1 Name : " Margin="23,65,0,0" FontSize="24" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="P1Name" Content="Player 1: " Margin="23,65,0,0" FontSize="24" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <TextBlock x:Name="tbLabel1" Text="" FontSize="24"  HorizontalAlignment="Left" Margin="271,65,0,514" RenderTransformOrigin="0.5,0.5" Width="5">
             <TextBlock.RenderTransform>
                 <TransformGroup>
@@ -22,7 +22,7 @@
                 </TransformGroup>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <Label Content="Player 2 Name : " Margin="387,65,0,0" FontSize="24" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="P2Name" Content="Player 2: " Margin="387,65,0,0" FontSize="24" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <TextBlock x:Name="tbLabel2" Text="" FontSize="24"  HorizontalAlignment="Left" Margin="669,65,0,514"/>
         <Button x:Name="btnRowOne" Content="Row 1" Click="btnRowOne_Click" Margin="611,158,27,407" FontWeight="Bold" FontSize="24" Background="#FF979595"/>
         <Button x:Name="btnRowTwo" Content="Row 2" Click="btnRowTwo_Click" Margin="611,282,27,282" FontWeight="Bold" FontSize="24" Background="#FF979595" />
