@@ -40,6 +40,6 @@
         <Image x:Name="Stone7" Source="/Resources/Stone2.png" Margin="235,403,439,161"/>
         <Image x:Name="Stone8" Source="/Resources/Stone2.png" Margin="363,403,311,161"/>
         <Image x:Name="Stone9" Source="/Resources/Stone2.png" Margin="472,403,202,161"/>
-
+        <TextBlock x:Name="tbError" Text="" FontSize="24"  HorizontalAlignment="Left" Margin="329,18,0,577" Foreground="Red"/>
     </Grid>
 </Window>
