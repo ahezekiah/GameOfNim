@@ -52,7 +52,7 @@ namespace GameOfNim
             {
                 Row1[i].Visibility = Visibility.Visible;
             }
-            for (int i = Row1.Count - 1; i >= 0; i--)
+            for (int i = Row2.Count - 1; i >= 0; i--)
             {
                 Row2[i].Visibility = Visibility.Visible;
             }
