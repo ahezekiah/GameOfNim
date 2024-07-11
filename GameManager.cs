@@ -7,13 +7,23 @@ using System.Windows.Controls;
 
 namespace GameOfNim
 {
+    public enum DifficultyType
+    {
+        EASY,
+        MEDIUM,
+        HARD
+    }
+
     public class GameManager
     {
+        public GameManager() { }
+
         public Player PlayerOne { get; set; }
         public Player PlayerTwo { get; set; }
         public bool IsPlayer1 { get; set; } = true;
-        public bool IsGameOver { get; set; } = false;
-        public List<List<Image>> Rows { get; set; }
+        public DifficultyType DiffType { get; set; }
+        public List<int> Rows { get; set; }
+        public int rowChosen { get; set; } = -1;
 
         public GameManager(string p1Name, string p2Name) 
         {
@@ -21,30 +31,51 @@ namespace GameOfNim
             PlayerTwo = new Player(p2Name);
         }
 
-        public void Start()
+        public void Easy()
         {
-            // Start of game loop
+            Rows.Clear();
 
+            // number of lists
+            Rows.Add(1);
+            Rows.Add(3);
+            Rows.Add(5);
+        }
 
-            while (!IsGameOver)
+        public void Medium()
+        {
+            Rows.Clear();
+
+            // number of lists
+            Rows.Add(1);
+            Rows.Add(3);
+            Rows.Add(5);
+            Rows.Add(7);
+        }
+
+        public void Hard()
+        {
+            Rows.Clear();
+
+            // number of lists
+            Rows.Add(3);
+            Rows.Add(5);
+            Rows.Add(7);
+            Rows.Add(9);
+            Rows.Add(11);
+        }
+
+        public bool Subtract(int row)
+        {
+            if (Rows[row] <= 0 || row != rowChosen)
             {
-
+                return false;
             }
-        }
-
-        private void Easy()
-        {
-            // number of lists
-        }
-
-        private void Medium()
-        {
-            // number of lists
-        }
-
-        private void Hard()
-        {
-            // number of lists
+            else
+            {
+                rowChosen = row;
+                Rows[row]--;
+                return true;
+            }
         }
 
         private void SwapPlayer()
@@ -52,8 +83,19 @@ namespace GameOfNim
             IsPlayer1 = !IsPlayer1;
         }
 
-        private bool CheckWin()
+        public bool CheckWin()
         {
+            int totalStones = 0;
+            for (int i = 0; i < Rows.Count; i++)
+            {
+                totalStones += Rows[i];
+            }
+
+            if (totalStones <= 0)
+            {
+                return true;
+            }
+            SwapPlayer();
             return false;
         }
     }

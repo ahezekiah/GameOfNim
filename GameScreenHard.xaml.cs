@@ -19,9 +19,12 @@ namespace GameOfNim
     /// </summary>
     public partial class GameScreenHard : Window
     {
-        public GameScreenHard()
+        GameManager gm = new GameManager();
+
+        public GameScreenHard(GameManager gm)
         {
             InitializeComponent();
+            this.gm = gm;
         }
 
         private void btnRowOne_Click(object sender, RoutedEventArgs e)
