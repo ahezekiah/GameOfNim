@@ -19,6 +19,7 @@ namespace GameOfNim
     /// </summary>
     public partial class MenuScreen : Window
     {
+        
         public MenuScreen()
         {
             InitializeComponent();
@@ -33,23 +34,26 @@ namespace GameOfNim
 
             //This will open a certain game screen based on the selected difficulty
             
+            //Set player names
+            GameManager gm = new GameManager(txtPlayer1.Text, txtPlayer2.Text);
+            
             if (rbEasy.IsChecked == true)
             {
-                SetGameDifficulty("Easy");
                 gameScreenEasy.Show();
                 this.Hide();
+                SetGameDifficulty("Easy", gm);
             }
             else if (rbMedium.IsChecked == true)
             {
-                SetGameDifficulty("Medium");
                 gameScreenMedium.Show();
                 this.Hide();
+                SetGameDifficulty("Medium", gm);
             }
             else if (rbHard.IsChecked == true)
             {
-                SetGameDifficulty("Hard");
                 gameScreenHard.Show();
                 this.Hide();
+                SetGameDifficulty("Hard", gm);
             }
             
         }
@@ -69,24 +73,27 @@ namespace GameOfNim
             {
                 string selectedDifficulty = radioButton.Content.ToString();
                 // Now you can use selectedDifficulty to set the game's difficulty level
-                SetGameDifficulty(selectedDifficulty);
+                //SetGameDifficulty(selectedDifficulty);
             }
         }
 
-        private void SetGameDifficulty(string difficulty)
+        private void SetGameDifficulty(string difficulty, GameManager gm)
         {
             // Implement the logic to set the game's difficulty based on the selected option
             switch (difficulty)
             {
                 case "Easy":
                     // Set easy difficulty {Has 4 rows/10 stones}
+                    gm.DifficultyType = DifficultyType.EASY;
                     break;
                 case "Medium":
-                    // Set medium difficulty {Has 5 rows/15 stones}
-                    break;
+					// Set medium difficulty {Has 5 rows/15 stones}
+					gm.DifficultyType = DifficultyType.MEDIUM;
+					break;
                 case "Hard":
-                    // Set hard difficulty {Has 6 rows/21 stones}
-                    break;
+					// Set hard difficulty {Has 6 rows/21 stones}
+					gm.DifficultyType = DifficultyType.HARD;
+					break;
             }
         }
     }

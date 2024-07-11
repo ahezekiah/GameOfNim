@@ -7,15 +7,21 @@ using System.Windows.Controls;
 
 namespace GameOfNim
 {
+    public enum DifficultyType
+    {
+        EASY,
+        MEDIUM,
+        HARD
+    }
     public class GameManager
     {
-        public bool IsGameOver { get; set; } = false;
         public GameManager() { }
 
         public Player PlayerOne { get; set; }
         public Player PlayerTwo { get; set; }
         public bool IsPlayer1 { get; set; } = true;
         public bool IsGameOver { get; set; } = false;
+        public DifficultyType DifficultyType { get; set; }
         public List<List<Image>> Rows { get; set; }
 
         public GameManager(string p1Name, string p2Name) 
