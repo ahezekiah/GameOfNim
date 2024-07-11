@@ -24,11 +24,13 @@ namespace GameOfNim
         public DifficultyType DiffType { get; set; }
         public List<int> Rows { get; set; }
         public int rowChosen { get; set; } = -1;
+        private bool startTurn = true;
 
         public GameManager(string p1Name, string p2Name) 
         {
             PlayerOne = new Player(p1Name);
             PlayerTwo = new Player(p2Name);
+            Rows = new List<int>();
         }
 
         public void Easy()
@@ -66,14 +68,15 @@ namespace GameOfNim
 
         public bool Subtract(int row)
         {
-            if (Rows[row] <= 0 || row != rowChosen)
+            if ((Rows[row - 1] <= 0 || row != rowChosen) && startTurn != true)
             {
                 return false;
             }
             else
             {
                 rowChosen = row;
-                Rows[row]--;
+                startTurn = false;
+                Rows[row - 1]--;
                 return true;
             }
         }
@@ -81,6 +84,8 @@ namespace GameOfNim
         private void SwapPlayer()
         {
             IsPlayer1 = !IsPlayer1;
+            startTurn = true;
+            rowChosen = 0;
         }
 
         public bool CheckWin()

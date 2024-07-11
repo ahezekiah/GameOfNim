@@ -43,6 +43,8 @@ namespace GameOfNim
 
         private void SetupGame()
         {
+            P1Name.Content = "Player 1: " + gm.PlayerOne.Name;
+            P2Name.Content = "Player 2: " + gm.PlayerTwo.Name;
             gm.Easy();
             for (int i = Row1.Count - 1; i >= 0; i--)
             {
@@ -78,7 +80,7 @@ namespace GameOfNim
         private void btnRowTwo_Click(object sender, RoutedEventArgs e)
         {
             //Has 3 stones in the row
-            if (gm.Subtract(1))
+            if (gm.Subtract(2))
             {
                 for (int i = Row2.Count - 1; i >= 0; i--)
                 {
@@ -95,7 +97,7 @@ namespace GameOfNim
         private void btnRowThree_Click(object sender, RoutedEventArgs e)
         {
             //Has 5 stones in the row
-            if (gm.Subtract(1))
+            if (gm.Subtract(3))
             {
                 for (int i = Row3.Count - 1; i >= 0; i--)
                 {
