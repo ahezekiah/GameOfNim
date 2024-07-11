@@ -12,10 +12,10 @@
         </Grid.Background>
         <Label Content="Difficulty : Hard" Margin="23,10,0,0" FontSize="24" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Label Content="Player 1 Name : " Margin="23,65,0,0" FontSize="24" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBlock x:Name="tbLabel1" Text="" FontSize="24"  HorizontalAlignment="Left" Margin="271,65,0,514" RenderTransformOrigin="0.5,0.5" Width="5">
+        <TextBlock x:Name="tbLabel1" Text="" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Margin="211,70,0,509" RenderTransformOrigin="0.5,0.5" Width="161">
             <TextBlock.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform ScaleX="-1"/>
+                    <ScaleTransform ScaleX="1"/>
                     <SkewTransform/>
                     <RotateTransform/>
                     <TranslateTransform/>
@@ -23,7 +23,7 @@
             </TextBlock.RenderTransform>
         </TextBlock>
         <Label Content="Player 2 Name : " Margin="387,65,0,0" FontSize="24" FontWeight="Bold" FontStyle="Italic" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        <TextBlock x:Name="tbLabel2" Text="" FontSize="24"  HorizontalAlignment="Left" Margin="669,65,0,514"/>
+        <TextBlock x:Name="tbLabel2" Text="" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Margin="583,69,0,510" Width="225"/>
         <Button x:Name="btnRowOne" Content="Row 1" Click="btnRowOne_Click" Margin="654,124,21,450" FontWeight="Bold" FontSize="24" Background="#FF979595"/>
         <Button x:Name="btnRowTwo" Content="Row 2" Click="btnRowTwo_Click" Margin="654,206,21,368" FontWeight="Bold" FontSize="24" Background="#FF979595" />
         <Button x:Name="btnRowThree" Content="Row 3" Click="btnRowThree_Click" Margin="654,291,21,282" FontWeight="Bold" FontSize="24" Background="#FF979595"/>
@@ -34,41 +34,42 @@
         <Button x:Name="btnReturnHome" Content="Close Game" Click="btnReturnHome_Click" FontSize="25" FontWeight="Bold" FontStyle="Italic" Background="Black" Foreground="White" Margin="529,550,107,10" />
 
         <Image x:Name="Stone1" Source="/Resources/Stone2.png" Margin="162,141,534,446"/>
-        <Image x:Name="Stone2" Source="/Resources/Stone2.png" Margin="376,141,344,446"/>
-        <Image x:Name="Stone3" Source="/Resources/Stone2.png" Margin="274,141,438,446"/>
+        <Image x:Name="Stone2" Source="/Resources/Stone2.png" Margin="275,141,445,446"/>
+        <Image x:Name="Stone3" Source="/Resources/Stone2.png" Margin="373,141,339,446"/>
         <Image x:Name="Stone4" Source="/Resources/Stone2.png" Margin="86,221,615,364"/>
         <Image x:Name="Stone5" Source="/Resources/Stone2.png" Margin="188,221,537,364"/>
         <Image x:Name="Stone6" Source="/Resources/Stone2.png" Margin="282,221,449,364"/>
         <Image x:Name="Stone7" Source="/Resources/Stone2.png" Margin="373,221,341,364"/>
         <Image x:Name="Stone8" Source="/Resources/Stone2.png" Margin="461,221,263,364"/>
-        <Image x:Name="Stone9" Source="/Resources/Stone2.png" Margin="92,303,620,282"/>
-        <Image x:Name="Stone10" Source="/Resources/Stone2.png" Margin="491,303,213,282"/>
-        <Image x:Name="Stone11" Source="/Resources/Stone2.png" Margin="170,303,541,282"/>
-        <Image x:Name="Stone12" Source="/Resources/Stone2.png" Margin="248,303,461,282"/>
-        <Image x:Name="Stone13" Source="/Resources/Stone2.png" Margin="324,303,382,282"/>
-        <Image x:Name="Stone14" Source="/Resources/Stone2.png" Margin="10,303,694,282"/>
-        <Image x:Name="Stone15" Source="/Resources/Stone2.png" Margin="406,303,298,282"/>
-        <Image x:Name="Stone16" Source="/Resources/Stone2.png" Margin="201,380,514,205"/>
-        <Image x:Name="Stone17" Source="/Resources/Stone2.png" Margin="276,380,443,205"/>
-        <Image x:Name="Stone18" Source="/Resources/Stone2.png" Margin="345,380,372,205"/>
-        <Image x:Name="Stone19" Source="/Resources/Stone2.png" Margin="412,380,304,205"/>
-        <Image x:Name="Stone20" Source="/Resources/Stone2.png" Margin="484,380,227,205"/>
-        <Image x:Name="Stone21" Source="/Resources/Stone2.png" Margin="553,380,157,205"/>
-        <Image x:Name="Stone22" Source="/Resources/Stone2.png" Margin="130,380,580,205"/>
-        <Image x:Name="Stone23" Source="/Resources/Stone2.png" Margin="62,380,648,205"/>
-        <Image x:Name="Stone24" Source="/Resources/Stone2.png" Margin="-8,380,718,205"/>
-        <Image x:Name="Stone25" Source="/Resources/Stone2.png" Margin="564,464,161,127"/>
-        <Image x:Name="Stone26" Source="/Resources/Stone2.png" Margin="447,464,278,127"/>
-        <Image x:Name="Stone27" Source="/Resources/Stone2.png" Margin="506,464,220,127"/>
-        <Image x:Name="Stone28" Source="/Resources/Stone2.png" Margin="392,464,334,127"/>
-        <Image x:Name="Stone29" Source="/Resources/Stone2.png" Margin="337,464,389,127"/>
-        <Image x:Name="Stone30" Source="/Resources/Stone2.png" Margin="227,464,499,127"/>
-        <Image x:Name="Stone31" Source="/Resources/Stone2.png" Margin="49,464,677,127"/>
-        <Image x:Name="Stone32" Source="/Resources/Stone2.png" Margin="282,464,444,127"/>
-        <Image x:Name="Stone33" Source="/Resources/Stone2.png" Margin="113,464,613,127"/>
-        <Image x:Name="Stone34" Source="/Resources/Stone2.png" Margin="172,464,554,127"/>
-        <Image x:Name="Stone35" Source="/Resources/Stone2.png" Margin="-11,464,737,127"/>
+        <Image x:Name="Stone9" Source="/Resources/Stone2.png" Margin="22,303,690,282"/>
+        <Image x:Name="Stone10" Source="/Resources/Stone2.png" Margin="98,303,606,282"/>
+        <Image x:Name="Stone11" Source="/Resources/Stone2.png" Margin="188,303,524,282"/>
+        <Image x:Name="Stone12" Source="/Resources/Stone2.png" Margin="269,303,439,282"/>
+        <Image x:Name="Stone13" Source="/Resources/Stone2.png" Margin="356,303,350,282"/>
+        <Image x:Name="Stone14" Source="/Resources/Stone2.png" Margin="435,303,269,282"/>
+        <Image x:Name="Stone15" Source="/Resources/Stone2.png" Margin="510,303,194,282"/>
+        <Image x:Name="Stone16" Source="/Resources/Stone2.png" Margin="-6,380,721,205"/>
+        <Image x:Name="Stone17" Source="/Resources/Stone2.png" Margin="64,380,655,205"/>
+        <Image x:Name="Stone18" Source="/Resources/Stone2.png" Margin="134,380,583,205"/>
+        <Image x:Name="Stone19" Source="/Resources/Stone2.png" Margin="201,380,515,205"/>
+        <Image x:Name="Stone20" Source="/Resources/Stone2.png" Margin="270,380,440,205"/>
+        <Image x:Name="Stone21" Source="/Resources/Stone2.png" Margin="343,380,367,205"/>
+        <Image x:Name="Stone22" Source="/Resources/Stone2.png" Margin="413,380,297,205"/>
+        <Image x:Name="Stone23" Source="/Resources/Stone2.png" Margin="484,380,226,205"/>
+        <Image x:Name="Stone24" Source="/Resources/Stone2.png" Margin="553,380,157,205"/>
+        <Image x:Name="Stone25" Source="/Resources/Stone2.png" Margin="-17,464,742,127"/>
+        <Image x:Name="Stone26" Source="/Resources/Stone2.png" Margin="44,464,681,127" RenderTransformOrigin="-1.31,0.162"/>
+        <Image x:Name="Stone27" Source="/Resources/Stone2.png" Margin="100,464,626,127"/>
+        <Image x:Name="Stone28" Source="/Resources/Stone2.png" Margin="163,464,563,127"/>
+        <Image x:Name="Stone29" Source="/Resources/Stone2.png" Margin="222,465,504,126"/>
+        <Image x:Name="Stone30" Source="/Resources/Stone2.png" Margin="283,465,443,125" RenderTransformOrigin="-2.458,-1.709"/>
+        <Image x:Name="Stone31" Source="/Resources/Stone2.png" Margin="340,466,386,124"/>
+        <Image x:Name="Stone32" Source="/Resources/Stone2.png" Margin="396,467,330,124"/>
+        <Image x:Name="Stone33" Source="/Resources/Stone2.png" Margin="458,467,268,124"/>
+        <Image x:Name="Stone34" Source="/Resources/Stone2.png" Margin="517,466,209,124"/>
+        <Image x:Name="Stone35" Source="/Resources/Stone2.png" Margin="574,467,152,124"/>
 
         <TextBlock x:Name="tbError" Text="" FontSize="24"  HorizontalAlignment="Left" Margin="332,18,0,577" Foreground="Red"/>
+        <TextBlock x:Name="gameData" HorizontalAlignment="Left" FontSize="24" FontWeight="Bold" Margin="292,18,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="35" Width="516"/>
     </Grid>
 </Window>
