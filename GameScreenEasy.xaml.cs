@@ -39,6 +39,7 @@ namespace GameOfNim
             Row3.Add(Stone8);
             Row3.Add(Stone9);
             this.gm = gm;
+            gameData.Text = "Welcome to the Game! It's " + gm.PlayerOne.Name + "'s turn!";
             SetupGame();
         }
 
@@ -77,6 +78,10 @@ namespace GameOfNim
                 }
                 played = true;
             }
+            else
+            {
+                gameData.Text = "Can't take a stone from that row.";
+            }
         }
 
         private void btnRowTwo_Click(object sender, RoutedEventArgs e)
@@ -93,6 +98,10 @@ namespace GameOfNim
                     }
                 }
                 played = true;
+            }
+            else
+            {
+                gameData.Text = "Can't take a stone from that row.";
             }
         }
 
@@ -111,6 +120,10 @@ namespace GameOfNim
                 }
                 played = true;
             }
+            else
+            {
+                gameData.Text = "Can't take a stone from that row.";
+            }
         }
 
 
@@ -127,8 +140,20 @@ namespace GameOfNim
                 }
                 else
                 {
+                    if (gm.IsPlayer1)
+                    {
+                        gameData.Text = gm.PlayerOne.Name + "'s turn.";
+                    }
+                    else
+                    {
+                        gameData.Text = gm.PlayerTwo.Name + "'s turn.";
+                    }
                     played = false;
                 }
+            }
+            else
+            {
+                gameData.Text = "Can't end turn, you must take a stone.";
             }
         }
 
