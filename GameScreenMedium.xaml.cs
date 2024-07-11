@@ -19,9 +19,12 @@ namespace GameOfNim
     /// </summary>
     public partial class GameScreenMedium : Window
     {
-        public GameScreenMedium()
+        GameManager gm = new GameManager();
+
+        public GameScreenMedium(GameManager gm)
         {
             InitializeComponent();
+            this.gm = gm;
         }
 
         private void btnRowOne_Click(object sender, RoutedEventArgs e)

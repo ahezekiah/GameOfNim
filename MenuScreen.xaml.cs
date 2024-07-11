@@ -28,15 +28,14 @@ namespace GameOfNim
 
         private void btnGame_Click(object sender, RoutedEventArgs e)
         {
-            GameScreenEasy gameScreenEasy = new GameScreenEasy();
-            GameScreenMedium gameScreenMedium = new GameScreenMedium();
-            GameScreenHard gameScreenHard = new GameScreenHard();
-
-            //This will open a certain game screen based on the selected difficulty
-            
             //Set player names
             GameManager gm = new GameManager(txtPlayer1.Text, txtPlayer2.Text);
+
+            GameScreenEasy gameScreenEasy = new GameScreenEasy(gm);
+            GameScreenMedium gameScreenMedium = new GameScreenMedium(gm);
+            GameScreenHard gameScreenHard = new GameScreenHard(gm);
             
+            //This will open a certain game screen based on the selected difficulty
             if (rbEasy.IsChecked == true)
             {
                 gameScreenEasy.Show();
@@ -84,15 +83,15 @@ namespace GameOfNim
             {
                 case "Easy":
                     // Set easy difficulty {Has 4 rows/10 stones}
-                    gm.DifficultyType = DifficultyType.EASY;
+                    gm.DiffType = DifficultyType.EASY;
                     break;
                 case "Medium":
 					// Set medium difficulty {Has 5 rows/15 stones}
-					gm.DifficultyType = DifficultyType.MEDIUM;
+					gm.DiffType = DifficultyType.MEDIUM;
 					break;
                 case "Hard":
 					// Set hard difficulty {Has 6 rows/21 stones}
-					gm.DifficultyType = DifficultyType.HARD;
+					gm.DiffType = DifficultyType.HARD;
 					break;
             }
         }
