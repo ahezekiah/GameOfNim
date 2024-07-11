@@ -20,6 +20,7 @@ namespace GameOfNim
     public partial class GameScreenEasy : Window
     {
         public GameManager gm;
+        WinScreen winScreen = new WinScreen();
         private List<Image> Row1 = new List<Image>();
         private List<Image> Row2 = new List<Image>();
         private List<Image> Row3 = new List<Image>();
@@ -46,6 +47,7 @@ namespace GameOfNim
             P1Name.Content = "Player 1: " + gm.PlayerOne.Name;
             P2Name.Content = "Player 2: " + gm.PlayerTwo.Name;
             gm.Easy();
+            played = false;
             for (int i = Row1.Count - 1; i >= 0; i--)
             {
                 Row1[i].Visibility = Visibility.Visible;
@@ -119,7 +121,9 @@ namespace GameOfNim
             {
                 if (gm.CheckWin())
                 {
-
+                    winScreen.Setup(gm.PlayerOne.Name, gm.PlayerTwo.Name, "Easy", !gm.IsPlayer1);
+                    winScreen.Show();
+                    this.Close();
                 }
                 else
                 {
@@ -138,7 +142,7 @@ namespace GameOfNim
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

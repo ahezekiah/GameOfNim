@@ -25,14 +25,12 @@ namespace GameOfNim
         {
             MenuScreen menuScreen = new MenuScreen();
             menuScreen.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnEnd_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
-       
     }
 }

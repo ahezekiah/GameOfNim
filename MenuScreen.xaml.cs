@@ -39,19 +39,19 @@ namespace GameOfNim
             if (rbEasy.IsChecked == true)
             {
                 gameScreenEasy.Show();
-                this.Hide();
+                this.Close();
                 SetGameDifficulty("Easy", gm);
             }
             else if (rbMedium.IsChecked == true)
             {
                 gameScreenMedium.Show();
-                this.Hide();
+                this.Close();
                 SetGameDifficulty("Medium", gm);
             }
             else if (rbHard.IsChecked == true)
             {
                 gameScreenHard.Show();
-                this.Hide();
+                this.Close();
                 SetGameDifficulty("Hard", gm);
             }
             
@@ -61,7 +61,7 @@ namespace GameOfNim
         {
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            this.Hide();
+            this.Close();
         }
 
 
