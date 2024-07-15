@@ -82,15 +82,15 @@ namespace GameOfNim
             switch (difficulty)
             {
                 case "Easy":
-                    // Set easy difficulty {Has 4 rows/10 stones}
+                    // Set easy difficulty {Has 3 rows/9 stones}
                     gm.DiffType = DifficultyType.EASY;
                     break;
                 case "Medium":
-					// Set medium difficulty {Has 5 rows/15 stones}
+					// Set medium difficulty {Has 4 rows/16 stones}
 					gm.DiffType = DifficultyType.MEDIUM;
 					break;
                 case "Hard":
-					// Set hard difficulty {Has 6 rows/21 stones}
+					// Set hard difficulty {Has 5 rows/36 stones}
 					gm.DiffType = DifficultyType.HARD;
 					break;
             }
